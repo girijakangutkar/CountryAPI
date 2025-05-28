@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { themeContext } from "../context/ThemeContext";
 import "../styles/NavBar.css";
+import { LuSunDim } from "react-icons/lu";
+import { IoMdMoon } from "react-icons/io";
 
 function NavBar() {
   const { selectTheme, selectTheming } = useContext(themeContext);
@@ -31,7 +33,11 @@ function NavBar() {
 
       <div className="buttonPanel">
         <button onClick={selectTheming}>
-          {selectTheme == "Light" ? "Light" : "Dark"}
+          {selectTheme == "Light" ? (
+            <IoMdMoon size={20} />
+          ) : (
+            <LuSunDim size={20} />
+          )}
         </button>
       </div>
     </nav>
