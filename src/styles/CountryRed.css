@@ -1,0 +1,8 @@
+.contentDiv {
+  overflow-y: scroll;
+  height: auto;
+  margin: 20px;
+  padding: 5%;
+  max-height: 400px;
+  /* border: 1px solid wheat; */
+}

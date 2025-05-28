@@ -1,7 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useReducer } from "react";
+import { useState, useEffect, useReducer } from "react";
+import "../styles/CountryRed.css";
 
 function fetchCountryReducer(state, action) {
   switch (action.type) {
@@ -40,7 +39,7 @@ function CountryReducer() {
   }
 
   return (
-    <div>
+    <div className="contentDiv">
       <input value={search} onChange={(e) => setSearch(e.target.value)} />
       {state.loading && <p>Loading...</p>}
       {state.error && <p>Error: {state.error.message}</p>}

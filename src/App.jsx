@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import CountryReducer from "./components/CountryReducer";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import PrivateRoutes from "./components/PrivateRoutes";
+import { themeContext } from "./context/ThemeContext";
+import "./App.css";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+  const { selectTheme } = useContext(themeContext);
   return (
-    <div>
+    <div
+      className={selectTheme == "Light" ? "LightTheme" : "DarkTheme"}
+      id="mainDiv"
+    >
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />}>

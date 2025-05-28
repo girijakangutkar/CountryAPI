@@ -5,9 +5,11 @@ function Login({ setIsLogin, isLogin }) {
     setIsLogin(!isLogin);
   }
   return (
-    <div>
-      <h2>{isLogin ? "Logged in" : "Please log in"}</h2>
-      <button onClick={loginTo}>Login</button>
+    <div className="loginDiv">
+      <h2>{isLogin ? "Logged in" : "Please log in to explore"}</h2>
+      <button id="loginBtn" onClick={loginTo}>
+        Login
+      </button>
     </div>
   );
 }

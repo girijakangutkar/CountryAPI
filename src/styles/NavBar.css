@@ -1,0 +1,37 @@
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid #929292;
+  padding: 10px;
+  margin: 0;
+  width: inherit;
+  align-items: center;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  margin: 10px;
+  color: inherit;
+}
+
+.active {
+  background-color: rgb(43, 150, 226);
+  border-radius: 10px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.buttonPanel,
+.linkPanel {
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-items: center;
+}
+
+.buttonPanel button {
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
